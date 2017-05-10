@@ -63,6 +63,7 @@ class DefaultController extends Controller
      */
     public function profileAction(Request $request)
     {
+        var_dump("hey");
         return $this->render('AppBundle:Default:profile.html.twig');
     }
 }
