@@ -64,6 +64,5 @@ class DefaultController extends Controller
     public function profileAction(Request $request)
     {
         return $this->render('AppBundle:Default:profile.html.twig');
-
     }
 }
