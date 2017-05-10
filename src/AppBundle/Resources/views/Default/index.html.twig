@@ -1,0 +1,33 @@
+{% extends ('layout/layout.html.twig') %}
+
+{% block body %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Hello, world!</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <form action="{{ path('search') }}" method="post">
+                    <input type="text" placeholder="Rechercher un oiseau" class="form-control" id="dynamicSearch" name="q" style="border-radius: 0px;">
+                </form>
+                <div id="results">
+                    <ul id="listResult">
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div id="map"></div>
+    </div>
+    <div id="status"></div>
+    <button onclick="login();" id="login">Login</button>
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+{% endblock %}
+
